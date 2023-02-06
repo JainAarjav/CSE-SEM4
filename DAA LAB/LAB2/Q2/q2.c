@@ -53,17 +53,17 @@ int main()
         printf("%d\t",arr2[i]);
      }
      int sum=1;
-    for(i=0;i<4;i++)
+    for(i=0;arr1[i]!=0;++i)
     {
-        for(j=0;j<4;j++)
+        for(j=0;arr2[j]!=0;++j)
         {
-           if(arr1[i]==arr2[j])
-           {
-            
-            sum=sum*arr1[i];
-            arr2[j]=0;
-            break;
-             }
+            printf("%d\t%d\n", arr1[i], arr2[j]);
+            if(arr1[i]==arr2[j])
+            {
+                sum=sum*arr1[i];
+                arr2[j]=-99;
+                break;
+            }
         }
     }
     printf("sum ====%d\n",sum);
